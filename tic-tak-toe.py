@@ -23,10 +23,7 @@ while True:
         print("Match draw")
         break
     
-    for a,b,c in win:
-        if b_list[a] == b_list[b] and b_list[b] == b_list[c]:
-            print(f"Player {player} wins! Congratulations.")
-            flag = 1;
+    
          
     #player input
     print(f"Player {player} turn : ", end="")
@@ -37,6 +34,12 @@ while True:
         b_list[playerInput-1] = player
         #counter
         count = count+1
+
+        for a,b,c in win:
+            if b_list[a] == b_list[b] and b_list[b] == b_list[c]:
+                print(f"Player {player} wins! Congratulations.")
+                flag = 1;
+        
         #player switch
         if player == 'X':
             player = 'O'
